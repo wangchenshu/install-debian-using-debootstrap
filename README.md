@@ -67,7 +67,7 @@ hwclock --systohc --localtime
 
 ## 設定 locales
 ```
-apt-get install locales
+apt-get install -y locales
 
 vim /etc/locale.gen
 
@@ -99,12 +99,12 @@ apt install -y linux-headers-xxx-amd64
 apt-cache search firmware-
 
 apt-get -y install firmware-realtek
-apt-get install firmware-misc-nonfree
+apt-get install -y firmware-misc-nonfree
 ```
 
 ## 安裝 Grub Boot loader
 ```
-apt-get install grub2 efibootmgr os-prober
+apt-get install -y grub2 efibootmgr os-prober
 
 sudo cp -r /usr/lib/grub/x86_64-efi /mnt/usr/lib/grub/
 ```
@@ -126,7 +126,7 @@ passwd
 
 ## 安裝 sudo
 ```
-apt-get install sudo
+apt-get install -y sudo
 useradd -m -g users -s /bin/bash walter
 passwd walter
 gpasswd -a walter sudo
@@ -140,47 +140,48 @@ vim /etc/sudoers
 
 ## 安裝 driver
 ```
-apt-get install firmware-linux firmware-linux-free firmware-linux-nonfree
-apt-get install xorg
-apt-get install alsa-utils
-apt-get install ntfs-3g
-apt-get install gvfs 
-apt-get install blueman
-apt-get install pcscd pcsc-tools
-apt-get install usbutils
+apt-get install -y firmware-linux firmware-linux-free firmware-linux-nonfree
+apt-get install -y xorg
+apt-get install -y alsa-utils
+apt-get install -y ntfs-3g
+apt-get install -y gvfs 
+apt-get install -y blueman
+apt-get install -y pcscd pcsc-tools
+apt-get install -y usbutils
 ```
 
 ## 安裝其它 tool
 ```
-apt-get install pciutils
-apt-get install xbacklight
-apt-get install squashfs-tools
-apt-get install wget git
-apt-get install genisoimage
+apt-get install -y pciutils
+apt-get install -y xbacklight
+apt-get install -y squashfs-tools
+apt-get install -y wget git
+apt-get install -y genisoimage
+apt-get install -y net-tools
 ln -s /usr/bin/genisoimage /usr/bin/mkisofs
 ```
 
 ## 安裝 NetworkManager
 ```
-apt-get install network-manager network-manager-pptp network-manager-gnome network-manager-pptp-gnome
+apt-get install -y network-manager network-manager-pptp network-manager-gnome network-manager-pptp-gnome
 ```
 
 ## 安裝 kde plasma
 ```
-apt -y install task-kde-desktop
+apt install -y task-kde-desktop
 ```
 
 ## 安裝 fonts
 ```
-apt-get install fonts-dejavu fonts-wqy-microhei
+apt-get install -y fonts-dejavu fonts-wqy-microhei
 ```
 
 ## 安裝 fctix
 ```
-apt install fcitx
-apt-get -y install fcitx-chewing
-apt-get -y install fcitx-table-boshiamy
-apt-get install fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-ui-classic
+apt-get install -y fcitx
+apt-get install -y fcitx-chewing
+apt-get install -y fcitx-table-boshiamy
+apt-get install -y fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-ui-classic
 ```
 
 ## 設定 fcitx
@@ -198,12 +199,12 @@ XMODIFIERS=@im=fcitx
 
 ## 安裝 libcurses prel
 ```
-apt install libcurses-perl
+apt install -y libcurses-perl
 ```
 
 ## 安裝 driver
 ```
-apt-get install firmware-linux firmware-linux-free firmware-linux-nonfree
+apt-get install -y firmware-linux firmware-linux-free firmware-linux-nonfree
 ```
 
 ## 安裝 additional software
